@@ -1,0 +1,58 @@
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student data management</title>
+</head>
+<body>
+    <style>
+        h1 {text-align: center;}</style>
+    
+    <div class="mx-auto mt-50">
+        
+    
+    <h1 my-5> view details</h1>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">studentId</th>
+        <th scope="col">Name</th>
+        <th scope="col">course</th>
+        <th scope="col">semester</th>
+        <th scope="col">department</th>
+        <th scope="col">Phone No</th>
+        <th scope="col">Email Id</th>
+      </tr>
+    </thead>
+    {% for i in s %}
+    <tbody>
+      <tr>
+        <th scope="row">{{i.student_id}}</th>
+        
+        <td>{{i.name}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.semester}}</td>
+        <td>{{i.course.dept}}</td>
+        <td>{{i.phoneno}}</td>
+        <td>{{i.email}}</td>
+      </tr>
+      {% comment %} <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr> {% endcomment %}
+    </tbody>
+    {% endfor %}
+</table>
+</body>
+</html>
