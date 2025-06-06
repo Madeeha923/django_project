@@ -1,2 +1,2 @@
 Django
-Python
+Python=3.19
