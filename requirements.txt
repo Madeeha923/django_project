@@ -1,2 +1,1 @@
-Django
-Python=3.19
+django
